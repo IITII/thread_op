@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          xmlns="http://javafx.com/javafx"
+          fx:controller="Controller"
+          prefHeight="300.0" prefWidth="850.0"
+          alignment="CENTER">
+    <HBox spacing="10">
+
+        <GridPane>
+            <!--            输入框-->
+            <TextField
+                    fx:id="input1"
+                    GridPane.columnIndex="0"
+                    GridPane.rowIndex="0">
+                <GridPane.margin>
+                    <Insets bottom="5" left="5"/>
+                </GridPane.margin>
+            </TextField>
+            <TextField
+                    fx:id="input2"
+                    GridPane.columnIndex="1"
+                    GridPane.rowIndex="0">
+                <GridPane.margin>
+                    <Insets bottom="5" left="5"/>
+                </GridPane.margin>
+            </TextField>
+            <TextField
+                    fx:id="input3"
+                    GridPane.columnIndex="2"
+                    GridPane.rowIndex="0">
+                <GridPane.margin>
+                    <Insets bottom="5" left="5"/>
+                </GridPane.margin>
+            </TextField>
+            <!--            小输出框-->
+            <TextField
+                    fx:id="output1"
+                    GridPane.columnIndex="0"
+                    GridPane.rowIndex="1"
+                    disable="true">
+                <GridPane.margin>
+                    <Insets top="5" bottom="5" left="5"/>
+                </GridPane.margin>
+            </TextField>
+            <TextField
+                    fx:id="output2"
+                    GridPane.columnIndex="1"
+                    GridPane.rowIndex="1"
+                    disable="true">
+                <GridPane.margin>
+                    <Insets top="5" bottom="5" left="5"/>
+                </GridPane.margin>
+            </TextField>
+            <TextField
+                    fx:id="output3"
+                    GridPane.columnIndex="2"
+                    GridPane.rowIndex="1"
+                    disable="true">
+                <GridPane.margin>
+                    <Insets top="5" bottom="5" left="5"/>
+                </GridPane.margin>
+            </TextField>
+            <!--            大输出框-->
+            <TextField
+                    fx:id="lastOutput"
+                    GridPane.rowIndex="2"
+                    GridPane.columnSpan="3"
+                    prefHeight="50"
+                    disable="true">
+                <GridPane.margin>
+                    <Insets top="5" bottom="5" left="5"/>
+                </GridPane.margin>
+            </TextField>
+
+        </GridPane>
+        <VBox spacing="10">
+            <!--            按钮-->
+            <HBox spacing="10">
+                <Button fx:id="sure" onAction="#waitNotify">确定</Button>
+                <Button fx:id="clear" onAction="#cleanText">清除</Button>
+            </HBox>
+            <!--            单选按钮-->
+            <fx:define>
+                <ToggleGroup fx:id="toggleGroup"/>
+            </fx:define>
+            <RadioButton userData="0" text="wait,notify" toggleGroup="$toggleGroup" selected="true"/>
+            <RadioButton userData="1" text="latchdown" toggleGroup="$toggleGroup"/>
+            <RadioButton userData="2" text="semaphore" toggleGroup="$toggleGroup"/>
+        </VBox>
+    </HBox>
+</GridPane>
