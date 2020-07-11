@@ -80,7 +80,7 @@
         <VBox spacing="10">
             <!--            按钮-->
             <HBox spacing="10">
-                <Button fx:id="sure" onAction="#waitNotify">确定</Button>
+                <Button fx:id="sure" onAction="#main">确定</Button>
                 <Button fx:id="clear" onAction="#cleanText">清除</Button>
             </HBox>
             <!--            单选按钮-->
